@@ -1,0 +1,65 @@
+configuration {
+    font: "JetBrainsMono Nerd Font Propo 12";
+}
+
+* {
+    /* Theme Color Variables */
+    bg-opaque:  #1e1e2ecc;
+    surface1:   #313244;
+    crust:      #11111b;
+    lavender:   #b4befe;
+    text:       #cdd6f4;
+    subtext0:   #a6adc8;
+    red:        #f38ba8;
+    
+    background-color: transparent;
+    text-color:       @text;
+}
+
+window {
+    background-color: @bg-opaque;
+    border:           0px;
+    border-color:     @crust;
+    width:            100%;    
+    padding:          800px;
+}
+
+mainbox {
+    children: [ inputbar, listview ];
+}
+
+inputbar {
+    background-color: @crust;
+    text-color:       @text;
+    children:         [ prompt, entry ];
+    padding:          8px;
+}
+
+prompt {
+    text-color: @lavender;
+}
+
+entry {
+    text-color: @text;
+}
+
+listview {
+    lines:        10;
+    fixed-height: true;
+    scrollbar:    false;
+    spacing:      4px;
+}
+
+element {
+    padding:      8px;
+}
+
+element normal normal, element alternate normal {
+    background-color: transparent;
+    text-color:       @text;
+}
+
+element selected normal {
+    background-color: @surface1;
+    text-color:       @lavender;
+}

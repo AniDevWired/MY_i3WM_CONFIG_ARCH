@@ -1,0 +1,5 @@
+# Core Modifier Definition
+set $mod Mod4
+
+# Include all modular configuration files
+include ~/.config/i3/modules/*

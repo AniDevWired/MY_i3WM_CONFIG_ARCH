@@ -1,0 +1,8 @@
+menu, 
+.menu, 
+.csd .menu, 
+.csd .dropdown, 
+.csd .context-menu, 
+.popup-menu {
+    border-radius: 0;
+}

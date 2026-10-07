@@ -1,0 +1,58 @@
+# Alacritty Basic Configuration
+
+[general]
+# Live config reload is enabled by default. Most settings take effect as soon as you save.
+import = [
+  # uncomment the flavour you want below:
+  #"~/.config/alacritty/catppuccin-latte.toml"
+  # "~/.config/alacritty/catppuccin-frappe.toml"
+  "~/.config/alacritty/catppuccin-macchiato.toml"
+  # "~/.config/alacritty/catppuccin-mocha.toml"
+]
+live_config_reload = true
+
+[window]
+# Default window dimensions (columns and lines)
+dimensions = { columns = 80, lines = 24 }
+
+# Window padding (blank space around terminal text)
+padding = { x = 10, y = 10 }
+
+# Spread out additional padding evenly
+dynamic_padding = false
+
+# Window opacity (0.0 is completely transparent, 1.0 is completely opaque)
+opacity = 1
+
+# Blur the background behind transparent windows (Works on macOS/KDE/Gnome)
+blur = false
+
+# Window decorations ("Full", "None", or "Transparent")
+decorations = "Full"
+
+[scrolling]
+history = 2000 # Down from a typical default of 10,000+
+
+[font]
+# Adjust the terminal font size
+size = 12.0
+
+# Define your preferred font family (Make sure the font is installed on your system)
+normal = { family = "JetBrainsMono Nerd Font Propo", style = "Regular" }
+bold = { family = "JetBrainsMono Nerd Font Propo", style = "Bold" }
+italic = { family = "JetBrainsMono Nerd Font Propo", style = "Italic" }
+bold_italic = { family = "JetBrainsMono Nerd Font Propo", style = "Bold Italic" }
+
+[cursor]
+# Cursor style ("Block", "Underline", or "Beam")
+style = { shape = "Block", blinking = "Always" }
+unfocused_hollow = true
+blink_interval = 400
+thickness = 0.15
+
+[mouse]
+hide_when_typing = true
+
+[selection]
+# Automatically save selected text to the system clipboard
+save_to_clipboard = true
