@@ -1,0 +1,1 @@
+# MY_i3WM_CONFIG_ARCH
