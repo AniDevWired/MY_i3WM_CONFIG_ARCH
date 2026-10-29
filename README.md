@@ -63,7 +63,7 @@ You might have to set your display configuration manually. If your screen is bla
    ```
 
 2. Update the configuration line with your active display name, native resolution, and valid refresh rate:
-   ```i3config
+   ```bash
    exec --no-startup-id xrandr --output <YOUR_DISPLAY> --mode <YOUR_RES> --rate <YOUR_HZ> --primary
    ```
 
@@ -72,7 +72,7 @@ The interface layout will break, distort, or completely hide lists on standard m
 
 To fix the oversized window layout, replace the window block parameters using a cleaner, responsive approach:
 
-```rasi
+```bash
 window {
     background-color: @bg-opaque;
     border:           2px;
