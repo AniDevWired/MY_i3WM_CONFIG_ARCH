@@ -1,7 +1,6 @@
 # MY_i3WM_CONFIG_ARCH
 
-This is my first i3wm ricing. I have added auto install script. I tried to keep the memory useage as low as possible bcuz I want to dailydrive my machine actually
-
+This is my first i3wm ricing. I have added auto install script. I tried to keep the memory useage as low as possible bcuz I want to dailydrive my machine actually.
 
 ## :3
 
@@ -52,6 +51,36 @@ You will be asked to confirm before anything is changed. **Back up any configs y
 4. **Installs the theme** from the AUR: Catppuccin GTK Mocha, Papirus icons and Catppuccin Papirus folders, then applies the `cat-mocha-lavender` folder colour
 5. **Installs the Hatsune Miku cursors** into `~/.local/share/icons`
 6. **Copies the dotfiles** from this repo into `~/.config/`
+
+## Troubleshooting
+
+### xrandr
+You might have to set your display configuration manually. If your screen is blank, blurry, or uses a different port than the default setup in `~/.config/i3/modules/autostart.conf`, follow these steps:
+
+1. Find your correct display outputs by running:
+   ```bash
+   xrandr
+   ```
+
+2. Update the configuration line with your active display name, native resolution, and valid refresh rate:
+   ```i3config
+   exec --no-startup-id xrandr --output <YOUR_DISPLAY> --mode <YOUR_RES> --rate <YOUR_HZ> --primary
+   ```
+
+### rofi
+The interface layout will break, distort, or completely hide lists on standard monitor resolutions due to the hardcoded `padding: 800px;` statement in `~/.config/rofi/custom-theme.rasi`. 
+
+To fix the oversized window layout, replace the window block parameters using a cleaner, responsive approach:
+
+```rasi
+window {
+    background-color: @bg-opaque;
+    border:           2px;
+    border-color:     @lavender;
+    width:            550px;
+    padding:          20px;
+}
+```
 
 ## After Installing
 
