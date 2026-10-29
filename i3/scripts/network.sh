@@ -1,6 +1,6 @@
 #!/bin/bash
 
-COLOR_NET="#b4befe"   # Lavender
+COLOR_NET="#cdd6f4"   # text
 COLOR_TEXT="#a6adc8"  # subtext0
 
 interface=$(ip route | awk '/default/ {print $5; exit}')
